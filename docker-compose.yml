@@ -1,0 +1,44 @@
+services:
+  pc-ipm-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pc-ipm-api:latest
+    container_name: pc-ipm-api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      LOG_CHANNEL: stderr
+    volumes:
+      - pc-ipm-storage:/var/www/html/storage/app/public
+    expose:
+      - "9000"
+    networks:
+      - webstack
+      - mariadb_default
+
+  pc-ipm-api-web:
+    image: nginx:alpine
+    container_name: pc-ipm-api-web
+    restart: unless-stopped
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./public:/var/www/html/public:ro
+      - pc-ipm-storage:/var/www/html/storage/app/public:ro
+    expose:
+      - "80"
+    depends_on:
+      - pc-ipm-api
+    networks:
+      - webstack
+
+volumes:
+  pc-ipm-storage:
+
+networks:
+  webstack:
+    external: true
+  mariadb_default:
+    external: true

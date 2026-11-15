@@ -21,6 +21,10 @@ return Application::configure(basePath: dirname(__DIR__))
 
         // Security headers untuk semua respons (web + api)
         $middleware->append(\App\Http\Middleware\SecurityHeaders::class);
+
+        // Trust proxy chain (Cloudflare -> webstack-nginx -> sidecar nginx -> fpm)
+        // Tanpa ini signed URL Livewire upload & redirect https salah (401)
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // Handle 404 errors for API routes
