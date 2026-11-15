@@ -36,7 +36,7 @@ class Bidang extends Model
             get: function ($value, $attributes) {
                 $path = $attributes['gambar_bidang'] ?? null;
                 if (!$path) return null;
-                return url('uploads/' . $path);
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -46,11 +46,7 @@ class Bidang extends Model
     {
         static::deleting(function ($bidang) {
             if ($bidang->gambar_bidang) {
-                // Hapus manual dari public/uploads biar aman
-                $path = public_path('uploads/' . $bidang->gambar_bidang);
-                if (file_exists($path)) {
-                    @unlink($path);
-                }
+                Storage::disk('public')->delete($bidang->gambar_bidang);
             }
         });
     }

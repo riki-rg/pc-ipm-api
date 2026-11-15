@@ -40,7 +40,7 @@ class Kegiatan extends Model
             get: function ($value, $attributes) {
                 $path = $attributes['gambar'] ?? null;
                 if (!$path) return null;
-                return url('uploads/' . $path);
+                return Storage::disk('public')->url($path);
             },
         );
     }

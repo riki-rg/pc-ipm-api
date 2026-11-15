@@ -46,14 +46,23 @@ class ArtikelResource extends Resource
                         ->label('Gambar Header')
                         ->image()
                         ->directory('gambar-artikel') // Masuk ke public/uploads/gambar-artikel
-                        // HAPUS ->visibility('public') biar aman
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
                         ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
-                        ->maxSize(2048)
+                        ->maxSize(20480)
+                        ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB.')
                         ->columnSpanFull(),
 
                     RichEditor::make('isi_konten')
                         ->label('Isi Artikel')
                         ->required()
+                        ->placeholder('Tulis isi artikel di sini...')
+                        ->toolbarButtons([
+                            'bold', 'italic', 'underline', 'strike', 'link',
+                            'h2', 'h3', 'bulletList', 'orderedList', 'blockquote',
+                            'undo', 'redo',
+                        ])
                         ->columnSpanFull(),
                 ])->columnSpan(2),
 

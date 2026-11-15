@@ -41,8 +41,12 @@ class BidangResource extends Resource
                 ->label('Gambar Bidang')
                 ->image()
                 ->directory('gambar-bidang') // Masuk ke public/uploads/gambar-bidang
-                ->maxSize(2048)
+                ->disk('public')
+                ->visibility('public')
+                ->imageEditor()
                 ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(20480)
+                ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB.')
                 ->columnSpanFull(),
 
             Textarea::make('deskripsi_singkat')

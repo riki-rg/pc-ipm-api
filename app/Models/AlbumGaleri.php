@@ -43,8 +43,8 @@ class AlbumGaleri extends Model
                 // Kalau kosong, balikin null
                 if (!$path) return null;
 
-                // Hasilnya: http://127.0.0.1:8000/uploads/album-covers/foto.jpg
-                return url('uploads/' . $path);
+                // Hasilnya: https://.../storage/album-covers/foto.jpg
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -56,8 +56,7 @@ class AlbumGaleri extends Model
     {
         static::deleting(function ($album) {
             if ($album->cover) {
-                // Hapus file dari folder public/uploads pake disk 'hosting_public'
-                Storage::disk('hosting_public')->delete($album->cover);
+                Storage::disk('public')->delete($album->cover);
             }
         });
     }

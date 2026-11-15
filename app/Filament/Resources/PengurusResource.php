@@ -52,8 +52,12 @@ class PengurusResource extends Resource
                 ->label('Foto Profil')
                 ->image()
                 ->directory('foto-pengurus')
-                ->maxSize(2048)
+                ->disk('public')
                 ->visibility('public')
+                ->imageEditor()
+                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(20480)
+                ->helperText('JPG/PNG/WebP, maks 20MB. Rasio 1:1 paling pas.')
                 ->avatar()
                 ->columnSpanFull(),
 
