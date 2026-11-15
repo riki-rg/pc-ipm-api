@@ -22,5 +22,11 @@ php artisan config:cache >/dev/null 2>&1 || true
 php artisan route:cache >/dev/null 2>&1 || true
 php artisan view:cache >/dev/null 2>&1 || true
 
+# Publish Livewire/Filament assets ke public/ (image fpm).
+# PENTING: nginx sidecar mount public/ dari HOST, jadi setelah ini asset
+# harus di-sync ke host volume (lihat DEPLOYMENT.md).
+php artisan vendor:publish --tag=livewire:assets --force >/dev/null 2>&1 || true
+php artisan filament:assets >/dev/null 2>&1 || true
+
 echo "[entrypoint] starting php-fpm"
 exec "$@"
