@@ -50,7 +50,12 @@ class KegiatanResource extends Resource
                         ->label('Poster Kegiatan')
                         ->image()
                         ->directory('gambar-kegiatan') // Masuk ke uploads/gambar-kegiatan
-                        ->maxSize(2048)
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
+                        ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->maxSize(20480)
+                        ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB.')
                         ->columnSpanFull(),
 
                     // Select Pengurus (Panitia)
@@ -65,6 +70,12 @@ class KegiatanResource extends Resource
 
             Forms\Components\RichEditor::make('deskripsi')
                 ->label('Deskripsi Lengkap')
+                ->placeholder('Tulis deskripsi kegiatan di sini...')
+                ->toolbarButtons([
+                    'bold', 'italic', 'underline', 'strike', 'link',
+                    'h2', 'h3', 'bulletList', 'orderedList', 'blockquote',
+                    'undo', 'redo',
+                ])
                 ->columnSpanFull(),
         ]);
     }

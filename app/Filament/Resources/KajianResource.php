@@ -64,12 +64,24 @@ class KajianResource extends Resource
                         ->label(fn (Get $get) => $get('jenis') === 'poster' ? 'Upload Poster (Wajib)' : 'Gambar Header')
                         ->image()
                         ->directory('gambar-kajian')
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
+                        ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->maxSize(20480)
+                        ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB.')
                         ->required() // Selalu wajib biar gak kosong
                         ->columnSpanFull(),
 
                     // 3. Deskripsi (Hanya muncul kalau pilih ARTIKEL)
                     Forms\Components\RichEditor::make('deskripsi')
                         ->label('Isi Kajian / Notulensi')
+                        ->placeholder('Tulis isi kajian di sini...')
+                        ->toolbarButtons([
+                            'bold', 'italic', 'underline', 'strike', 'link',
+                            'h2', 'h3', 'bulletList', 'orderedList', 'blockquote',
+                            'undo', 'redo',
+                        ])
                         ->visible(fn (Get $get) => $get('jenis') === 'artikel') // Hilang kalau pilih Poster
                         ->columnSpanFull(),
                 ]),

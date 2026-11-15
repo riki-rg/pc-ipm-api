@@ -36,8 +36,8 @@ class Pengaturan extends Model
                 // Kalo kosong, balikin null
                 if (!$path) return null;
 
-                // Gabungin jadi link lengkap: http://.../uploads/logo/gambar.png
-                return url('uploads/' . $path);
+                // Gabungin jadi link lengkap: https://.../storage/logo/gambar.png
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -49,7 +49,7 @@ class Pengaturan extends Model
             if ($pengaturan->isDirty('logo')) {
                 $oldLogo = $pengaturan->getOriginal('logo');
                 if ($oldLogo) {
-                    Storage::disk('hosting_public')->delete($oldLogo);
+                    Storage::disk('public')->delete($oldLogo);
                 }
             }
         });

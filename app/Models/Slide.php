@@ -39,8 +39,8 @@ class Slide extends Model
                 // Kalau kosong, balikin null
                 if (!$path) return null;
 
-                // Gabungin jadi link lengkap ke folder uploads
-                return url('uploads/' . $path);
+                // Gabungin jadi link lengkap ke storage
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -53,7 +53,7 @@ class Slide extends Model
     {
         static::deleting(function ($slide) {
             if ($slide->url_gambar) {
-                Storage::disk('hosting_public')->delete($slide->url_gambar);
+                Storage::disk('public')->delete($slide->url_gambar);
             }
         });
     }

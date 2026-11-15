@@ -32,9 +32,12 @@ class FotoGaleriResource extends Resource
                         ->label('Foto')
                         ->image()
                         ->directory('galeri/foto')
+                        ->disk('public')
                         ->visibility('public')
-                        ->maxSize(4096)
+                        ->imageEditor()
                         ->acceptedFileTypes(['image/jpeg','image/png','image/webp'])
+                        ->maxSize(20480)
+                        ->helperText('JPG/PNG/WebP, maks 20MB.')
                         ->required(),
                 ])
                 ->columnSpanFull(),

@@ -27,9 +27,7 @@ class Kajian extends Model
         // Auto Hapus Gambar
         static::deleting(function ($model) {
             if ($model->gambar) {
-                // Hapus dari folder uploads
-                $path = 'public/uploads/' . basename($model->gambar);
-                if (Storage::exists($path)) Storage::delete($path);
+                Storage::disk('public')->delete($model->gambar);
             }
         });
     }
@@ -41,8 +39,8 @@ class Kajian extends Model
             get: function ($value, $attributes) {
                 $path = $attributes['gambar'] ?? null;
                 if (!$path) return null;
-                // Hasil: http://127.0.0.1:8000/uploads/gambar-kajian/foto.jpg
-                return url('uploads/' . $path);
+                // Hasil: https://.../storage/gambar-kajian/foto.jpg
+                return Storage::disk('public')->url($path);
             },
         );
     }

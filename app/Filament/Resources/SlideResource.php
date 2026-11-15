@@ -45,8 +45,12 @@ class SlideResource extends Resource
                         ->label('Gambar')
                         ->image()
                         ->directory('gambar-slide')
-                        ->maxSize(2048)
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
                         ->acceptedFileTypes(['image/jpeg','image/png','image/webp'])
+                        ->maxSize(20480)
+                        ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB. Resolusi lebar (16:6) paling pas untuk slider.')
                         ->columnSpanFull()
                         ->visible(fn ($get) => $get('type') === 'image'),
 

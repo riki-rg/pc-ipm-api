@@ -30,7 +30,7 @@ class FotoGaleri extends Model
             get: function ($value, $attributes) {
                 $path = $attributes['foto'] ?? null;
                 if (!$path) return null;
-                return url('uploads/' . $path);
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -40,7 +40,7 @@ class FotoGaleri extends Model
     {
         static::deleting(function ($item) {
             if ($item->foto) {
-                 Storage::disk('hosting_public')->delete($item->foto);
+                 Storage::disk('public')->delete($item->foto);
             }
         });
     }

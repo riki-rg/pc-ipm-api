@@ -60,9 +60,9 @@ class Pengurus extends Model
                 
                 if (!$path) return null;
 
-                // Return URL lengkap lewat folder uploads
-                // Hasil: http://127.0.0.1:8000/uploads/foto-pengurus/wajah.jpg
-                return url('uploads/' . $path);
+                // Return URL lengkap lewat storage disk public
+                // Hasil: https://.../storage/foto-pengurus/wajah.jpg
+                return Storage::disk('public')->url($path);
             },
         );
     }
@@ -72,11 +72,7 @@ class Pengurus extends Model
     {
         static::deleting(function ($pengurus) {
             if ($pengurus->foto_profil) {
-                // Hapus manual dari folder public/uploads biar bersih
-                $path = public_path('uploads/' . $pengurus->foto_profil);
-                if (file_exists($path)) {
-                    @unlink($path);
-                }
+                Storage::disk('public')->delete($pengurus->foto_profil);
             }
         });
     }

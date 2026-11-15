@@ -40,8 +40,7 @@ class Artikel extends Model
         // 2. Auto Hapus Gambar pas Artikel Dihapus
         static::deleting(function ($artikel) {
             if ($artikel->gambar_header) {
-                // Pake disk 'hosting_public' (folder uploads)
-                Storage::disk('hosting_public')->delete($artikel->gambar_header);
+                Storage::disk('public')->delete($artikel->gambar_header);
             }
         });
     }
@@ -60,8 +59,8 @@ class Artikel extends Model
                 $path = $attributes['gambar_header'] ?? null;
                 if (!$path) return null;
                 
-                // Hasil: http://.../uploads/gambar-artikel/foto.jpg
-                return url('uploads/' . $path);
+                // Hasil: https://.../storage/gambar-artikel/foto.jpg
+                return Storage::disk('public')->url($path);
             },
         );
     }

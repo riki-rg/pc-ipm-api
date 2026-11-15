@@ -31,9 +31,15 @@ class PengaturanResource extends Resource
                     TextInput::make('nama_website')->required(),
                     
                     FileUpload::make('logo') // Nah, ini enak skrg bisa khusus gambar
+                        ->label('Logo Website')
                         ->image()
                         ->directory('logo') // public/uploads/logo
-                        ->maxSize(2048),
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
+                        ->acceptedFileTypes(['image/jpeg','image/png','image/webp','image/svg+xml'])
+                        ->maxSize(10240)
+                        ->helperText('JPG/PNG/WebP/SVG, maks 10MB. Format persegi paling pas.'),
                         
                     Textarea::make('deskripsi_singkat')->columnSpanFull(),
                 ]),

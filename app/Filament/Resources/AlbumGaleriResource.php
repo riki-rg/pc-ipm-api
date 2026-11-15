@@ -52,7 +52,12 @@ class AlbumGaleriResource extends Resource
                         ->label('Cover Album (Satu Foto)')
                         ->image()
                         ->directory('album-covers')
-                        ->maxSize(3072)
+                        ->disk('public')
+                        ->visibility('public')
+                        ->imageEditor()
+                        ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->maxSize(20480)
+                        ->helperText('Format: JPG, PNG, atau WebP. Maksimal 20MB.')
                         ->required()
                         ->columnSpanFull(),
                 ]),
@@ -77,6 +82,12 @@ class AlbumGaleriResource extends Resource
                                 ->label('Foto')
                                 ->image()
                                 ->directory('galeri-foto') // Masuk ke folder uploads/galeri-foto
+                                ->disk('public')
+                                ->visibility('public')
+                                ->imageEditor()
+                                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                ->maxSize(20480)
+                                ->helperText('JPG/PNG/WebP, maks 20MB.')
                                 ->required(),
                                 
                             TextInput::make('keterangan')
