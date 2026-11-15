@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
         // -> browser memblokir mixed content -> FileUpload/RichEditor tidak jalan.
         if (config('app.env') === 'production') {
             URL::forceScheme('https');
+            URL::forceRootUrl(config('app.url'));
         }
 
         // Rate limiter untuk form kontak / pesan masuk (throttle:contact di routes/api.php)
