@@ -36,6 +36,17 @@ dan pastikan asset di-copy ke host volume (karena nginx sidecar mount public/ da
 - `php artisan filament:assets` juga perlu dijalankan setelah upgrade Filament.
 - Jika 502 Bad Gateway setelah restart container: restart `webstack-nginx` (DNS cache internal nginx menunjuk IP lama).
 
+## Fix Gambar Storage 404 (16 Nov 2026)
+
+**Gejala**: upload sukses, tapi `GET /storage/gambar-kajian/xxx.png` -> 404.
+
+**Akar masalah**: di nginx, `location ~* \.(png|jpg|...)$` (regex, untuk cache header)
+MENGALAHKAN `location /storage/` (prefix) karena regex match `.png`. Location regex itu
+punya `try_files $uri =404` dengan root `/var/www/html/public` -> file storage tidak ada di sana -> 404.
+
+**Fix**: `location ^~ /storage/` — prefix `^~` mengalahkan regex location.
+Sudah di `nginx/default.conf` (repo) dan live di server.
+
 ## Fix Final (16 Nov 2026) — Upload 401 & Mixed Content
 
 **Rantai proxy**: Cloudflare Tunnel (https) -> webstack-nginx:80 -> sidecar nginx:80 -> php-fpm
