@@ -13,6 +13,11 @@ Route::get('/admin/pembayaran-kas/rekap/export', [RekapPembayaranKas::class, 'ex
     ->middleware(['web', 'auth'])
     ->name('filament.admin.resources.pembayaran-kas.rekap.export');
 
+// Export laporan kas lengkap (iuran + pengeluaran + saldo)
+Route::get('/admin/laporan-kas/export', [\App\Filament\Pages\LaporanKas::class, 'exportExcel'])
+    ->middleware(['web', 'auth'])
+    ->name('filament.admin.pages.laporan-kas.export');
+
 Route::get('/', function () {
     return view('welcome');
 });
