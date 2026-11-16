@@ -59,10 +59,7 @@ class PembayaranKasResource extends Resource
 
                 Select::make('tahun')
                     ->label('Tahun')
-                    ->options(fn () => array_combine(
-                        range(now()->year - 1, now()->year + 1),
-                        range(now()->year - 1, now()->year + 1)
-                    ))
+                    ->options(fn () => tahun_options())
                     ->required(),
 
                 TextInput::make('nominal')
@@ -128,10 +125,7 @@ class PembayaranKasResource extends Resource
         ])
         ->filters([
             SelectFilter::make('tahun')->options(fn () =>
-                array_combine(
-                    range(now()->year - 1, now()->year + 1),
-                    range(now()->year - 1, now()->year + 1)
-                )
+                tahun_options()
             ),
         ])
         ->actions([
@@ -215,10 +209,7 @@ class PembayaranKasResource extends Resource
 
                 Select::make('tahun')
                     ->label('Tahun')
-                    ->options(fn () => array_combine(
-                        range(now()->year - 1, now()->year + 1),
-                        range(now()->year - 1, now()->year + 1)
-                    ))
+                    ->options(fn () => tahun_options())
                     ->required(),
 
                 TextInput::make('nominal')
@@ -279,10 +270,7 @@ class PembayaranKasResource extends Resource
         ])
         ->filters([
             SelectFilter::make('tahun')
-                ->options(fn () => array_combine(
-                    range(now()->year - 1, now()->year + 1),
-                    range(now()->year - 1, now()->year + 1)
-                )),
+                ->options(fn () => tahun_options()),
         ])
         ->actions([
             Tables\Actions\EditAction::make(),

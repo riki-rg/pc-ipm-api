@@ -23,7 +23,7 @@
     {{-- PILIH TAHUN + EXPORT --}}
     <form method="GET" class="mb-4 flex items-center gap-4">
         <select name="tahun" onchange="this.form.submit()" class="border rounded p-2">
-            @foreach (range(now()->year - 1, now()->year + 1) as $t)
+            @foreach (array_keys(tahun_options()) as $t)
                 <option value="{{ $t }}" {{ $t == $tahun ? 'selected' : '' }}>
                     {{ $t }}
                 </option>

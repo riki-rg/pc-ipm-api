@@ -21,7 +21,7 @@
         <form method="GET" class="flex items-center gap-2">
             <select name="tahun" onchange="this.form.submit()"
                 class="rounded-lg border border-gray-300 bg-white p-2 text-sm dark:bg-gray-900 dark:border-gray-700">
-                @foreach (range(now()->year - 1, now()->year + 1) as $t)
+                @foreach (array_keys(tahun_options()) as $t)
                     <option value="{{ $t }}" {{ $t == $tahun ? 'selected' : '' }}>{{ $t }}</option>
                 @endforeach
             </select>
