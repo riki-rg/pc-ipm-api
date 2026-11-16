@@ -1,12 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Filament\Pages\InputPembayaranKas;
 use App\Filament\Resources\PembayaranKasResource\Pages\RekapPembayaranKas;
-
-Route::post('/admin/input-pembayaran-kas/save', [InputPembayaranKas::class, 'saveAll'])
-    ->middleware(['web', 'auth'])
-    ->name('filament.admin.pages.inputPembayaranKas.saveAll');
+use App\Filament\Pages\LaporanKas;
 
 // Export rekap kas ke Excel — GET agar bisa di-download langsung dari browser
 Route::get('/admin/pembayaran-kas/rekap/export', [RekapPembayaranKas::class, 'exportExcel'])
@@ -14,7 +10,7 @@ Route::get('/admin/pembayaran-kas/rekap/export', [RekapPembayaranKas::class, 'ex
     ->name('filament.admin.resources.pembayaran-kas.rekap.export');
 
 // Export laporan kas lengkap (iuran + pengeluaran + saldo)
-Route::get('/admin/laporan-kas/export', [\App\Filament\Pages\LaporanKas::class, 'exportExcel'])
+Route::get('/admin/laporan-kas/export', [LaporanKas::class, 'exportExcel'])
     ->middleware(['web', 'auth'])
     ->name('filament.admin.pages.laporan-kas.export');
 
