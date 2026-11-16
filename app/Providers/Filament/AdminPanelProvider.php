@@ -18,6 +18,8 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\View\PanelsRenderHook;
+use Illuminate\Support\HtmlString;
 
 // import resource di sini
 use App\Filament\Resources\RoleResource;
@@ -35,13 +37,17 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(fn () => null)
             ->favicon(fn () => asset('favicon.png'))
             ->darkMode(false)
+            ->renderHook(
+                PanelsRenderHook::HEAD_END,
+                fn (): HtmlString => new HtmlString('<link rel="stylesheet" href="' . asset('css/filament/admin-brand.css') . '">'),
+            )
             ->resources([
                 \App\Filament\Resources\RoleResource::class,
                 \App\Filament\Resources\PermissionResource::class,
                 \App\Filament\Resources\UserResource::class,
             ])
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::hex('#0B3D2E'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
