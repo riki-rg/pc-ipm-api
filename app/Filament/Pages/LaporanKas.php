@@ -37,8 +37,10 @@ class LaporanKas extends Page
      * Export laporan kas lengkap (2 sheet: Penerimaan/Iuran & Pengeluaran + Saldo)
      * dalam format SpreadsheetML (.xls) — kompatibel Excel/LibreOffice.
      */
-    public static function exportExcel(int $tahun): \Symfony\Component\HttpFoundation\StreamedResponse
+    public static function exportExcel(?\Illuminate\Http\Request $request = null): \Symfony\Component\HttpFoundation\StreamedResponse
     {
+        $tahun = (int) ($request?->query('tahun') ?: now()->year);
+
         return response()->streamDownload(function () use ($tahun) {
             $namaBulan = [1=>'Jan',2=>'Feb',3=>'Mar',4=>'Apr',5=>'Mei',6=>'Jun',7=>'Jul',8=>'Agu',9=>'Sep',10=>'Okt',11=>'Nov',12=>'Des'];
 
