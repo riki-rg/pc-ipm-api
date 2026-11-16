@@ -19,6 +19,8 @@ class BidangResource extends Resource
 {
     protected static ?string $model = Bidang::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-group';
+    protected static ?string $navigationGroup = 'Organisasi';
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationLabel = 'Bidang';
     protected static ?string $pluralModelLabel = 'Bidang';
     protected static ?string $modelLabel = 'Bidang';

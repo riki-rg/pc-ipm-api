@@ -18,6 +18,8 @@ class PesanMasukResource extends Resource
 {
     protected static ?string $model = PesanMasuk::class;
     protected static ?string $navigationIcon = 'heroicon-o-inbox';
+    protected static ?string $navigationGroup = 'Interaksi';
+    protected static ?int $navigationSort = 1;
     protected static ?string $navigationLabel = 'Pesan Masuk';
 
     // Kita gak butuh FORM (karena admin cuma baca, gak nginput)

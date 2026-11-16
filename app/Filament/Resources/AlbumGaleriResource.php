@@ -21,6 +21,8 @@ class AlbumGaleriResource extends Resource
 {
     protected static ?string $model = AlbumGaleri::class;
     protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?string $navigationGroup = 'Publikasi';
+    protected static ?int $navigationSort = 5;
     protected static ?string $navigationLabel = 'Album Galeri';
 
     public static function form(Form $form): Form

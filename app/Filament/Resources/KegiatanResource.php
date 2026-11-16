@@ -15,6 +15,8 @@ class KegiatanResource extends Resource
 {
     protected static ?string $model = Kegiatan::class;
     protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
+    protected static ?string $navigationGroup = 'Publikasi';
+    protected static ?int $navigationSort = 4;
     protected static ?string $navigationLabel = 'Kegiatan';
 
     public static function form(Form $form): Form
