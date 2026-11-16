@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
             ->darkMode(false)
             ->renderHook(
                 PanelsRenderHook::HEAD_END,
-                fn (): HtmlString => new HtmlString('<link rel="stylesheet" href="' . asset('css/filament/admin-brand.css') . '">'),
+                fn (): HtmlString => new HtmlString('<link rel="stylesheet" href="' . asset('css/filament/admin-brand.css') . '?v=20261116-2">'),
             )
             ->resources([
                 \App\Filament\Resources\RoleResource::class,
