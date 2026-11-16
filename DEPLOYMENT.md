@@ -35,3 +35,19 @@ dan pastikan asset di-copy ke host volume (karena nginx sidecar mount public/ da
 ## Catatan lain
 - `php artisan filament:assets` juga perlu dijalankan setelah upgrade Filament.
 - Jika 502 Bad Gateway setelah restart container: restart `webstack-nginx` (DNS cache internal nginx menunjuk IP lama).
+
+## Fix Final (16 Nov 2026) — Upload 401 & Mixed Content
+
+**Rantai proxy**: Cloudflare Tunnel (https) -> webstack-nginx:80 -> sidecar nginx:80 -> php-fpm
+
+**3 masalah & fix**:
+1. webstack-nginx mengirim `X-Forwarded-Proto: http` ke sidecar -> Laravel melihat request http
+   -> Fix: `proxy_set_header X-Forwarded-Proto https;` di webstack-nginx vhost (file di server: `/opt/docker/webstack/nginx/conf.d/pc-ipm-mayong.conf`)
+2. Sidecar nginx tidak meneruskan skema ke php-fpm
+   -> Fix: `fastcgi_param HTTPS on; fastcgi_param X-Forwarded-Proto https;` di `nginx/default.conf` (repo)
+3. Komponen lazy-load Filament (x-load) generate URL http di halaman https -> browser blokir mixed content -> FileUpload/RichEditor mati
+   -> Fix: `URL::forceScheme('https') + URL::forceRootUrl(config('app.url'))` di AppServiceProvider (production)
+
+**Verifikasi**: upload cover "Pengunggahan selesai" (200), semua POST 200, tanpa 401.
+
+**Catatan**: conf webstack-nginx (`pc-ipm-mayong.conf`) berada di HOST server (`/opt/docker/webstack/nginx/conf.d/`), tidak di repo — backup manual jika rebuild server.
