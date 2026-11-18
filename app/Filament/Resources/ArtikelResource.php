@@ -79,6 +79,8 @@ class ArtikelResource extends Resource
                         ->required(),
 
                     DateTimePicker::make('tanggal_publish')
+                        ->label('Tanggal & Waktu Publikasi')
+                        ->seconds(false)
                         ->default(now()),
 
                     Select::make('user_id')
@@ -113,9 +115,9 @@ class ArtikelResource extends Resource
 
                 TextColumn::make('user.name')->label('Penulis'),
                 
-                TextColumn::make('created_at')
-                    ->label('Dibuat')
-                    ->date()
+                TextColumn::make('tanggal_publish')
+                    ->label('Tanggal Publish')
+                    ->dateTime('d M Y H:i')
                     ->sortable(),
             ])
             ->actions([

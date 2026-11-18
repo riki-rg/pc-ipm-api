@@ -15,7 +15,8 @@ class ArtikelController extends Controller
     public function index()
     {
         $artikel = Artikel::where('status', 'published') // Cuma yg published
-                    ->latest()
+                    ->orderByDesc('tanggal_publish')
+                    ->orderByDesc('created_at')
                     ->get();
 
         return $this->successResponse($artikel);

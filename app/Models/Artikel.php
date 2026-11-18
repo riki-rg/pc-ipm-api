@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str; // <-- Wajib import ini buat bikin Slug
+use Carbon\Carbon;
 
 class Artikel extends Model
 {
@@ -69,7 +70,9 @@ class Artikel extends Model
     protected function tanggalFormatted(): Attribute
     {
         return Attribute::make(
-            get: fn ($value, $attributes) => \Carbon\Carbon::parse($attributes['created_at'])->translatedFormat('d F Y'),
+            get: fn ($value, $attributes) => !empty($attributes['tanggal_publish'])
+                            ? Carbon::parse($attributes['tanggal_publish'])->translatedFormat('d F Y')
+                            : null,
         );
     }
 }
