@@ -20,7 +20,7 @@
     <div class="mb-6 flex flex-wrap items-center gap-4">
         <form method="GET" class="flex items-center gap-2">
             <select name="tahun" onchange="this.form.submit()"
-                class="rounded-lg border border-gray-300 bg-white p-2 text-sm dark:bg-gray-900 dark:border-gray-700">
+                class="min-w-[5.5rem] rounded-lg border border-gray-300 bg-white px-3 py-2 pr-8 text-sm dark:bg-gray-900 dark:border-gray-700">
                 @foreach (array_keys(tahun_options()) as $t)
                     <option value="{{ $t }}" {{ $t == $tahun ? 'selected' : '' }}>{{ $t }}</option>
                 @endforeach
@@ -29,7 +29,7 @@
         </form>
 
         <a href="{{ route('filament.admin.pages.laporan-kas.export') }}?tahun={{ $tahun }}"
-           class="inline-flex items-center gap-2 rounded-lg bg-success-600 px-4 py-2 text-sm font-semibold text-white hover:bg-success-700">
+           class="pcipm-action-button inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold">
             <x-heroicon-o-arrow-down-tray class="h-4 w-4" />
             Export Excel
         </a>
@@ -56,7 +56,7 @@
     {{-- Daftar Pengeluaran --}}
     <h3 class="mb-3 text-lg font-bold">Pengeluaran Tahun {{ $tahun }}</h3>
     <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
-        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+        <table class="w-full min-w-[640px] divide-y divide-gray-200 dark:divide-gray-700">
             <thead class="bg-gray-50 dark:bg-gray-800">
                 <tr>
                     <th class="p-3 text-left text-xs font-semibold uppercase">Tanggal</th>
