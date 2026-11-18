@@ -1,0 +1,19 @@
+---
+source_file: "public/js/filament/filament/app.js"
+type: "code"
+community: "app.js: filament/app.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/appjs_filament/appjs
+---
+
+# U()
+
+## Connections
+- [[I()]] - `calls` [EXTRACTED]
+- [[J()]] - `calls` [EXTRACTED]
+- [[filamentapp.js]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/appjs_filament/appjs

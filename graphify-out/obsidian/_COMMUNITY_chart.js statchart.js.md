@@ -1,0 +1,217 @@
+---
+type: community
+cohesion: 0.02
+members: 162
+---
+
+# chart.js: stat/chart.js
+
+**Cohesion:** 0.02 - loosely connected
+**Members:** 162 nodes
+
+## Members
+- [[Bn()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Et()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Gn()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Js()]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Mi()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Ne()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Nr()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Oo()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Pa()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Tn()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Xe()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Xo()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[Zt()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_animateOptions()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_cachedScopes()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_createAnimations()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_each()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_exec()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_get()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_getAnims()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_getRegistryForType()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_getSortedDatasetMetas()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_n()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_onDataPop()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_onDataPush()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_onDataShift()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_onDataSplice()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_onDataUnshift()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_sync()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[_willRender()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[aa()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[acquireContext()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[active()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[add()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[addBox()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[addControllers()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[addPlugins()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[addScales()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[afterDatasetsUpdate()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[afterDraw()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[afterEvent()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[afterInit()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[an()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[average()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[beforeDatasetDraw()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[beforeDatasetsDraw()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[beforeDraw()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[beforeLayout()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[boolean()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[callback()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[cc()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[chartOptionScopes()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[clearer()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[clone()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[color()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[datasetAnimationScopeKeys()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[datasetElementScopeKeys()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[datasetScopeKeys()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[diff()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[dn()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[dr()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[drawCaret()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[easeInBack()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[easeInOutBack()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[easeInOutElastic()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[easeOutBack()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[easeOutBounce()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[endOf()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[first()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[format()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[formats()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[fr()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[ga()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getActiveElements()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getAllParsedValues()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getCaretPosition()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getController()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getDataElement()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getDataVisibility()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getDecimalForPixel()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getDevicePixelRatio()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getElement()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getLabelForValue()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getOptionScopes()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getPadding()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getPlugin()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getPointLabelPosition()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getRange()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getScale()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getSortedVisibleDatasetMetas()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getTicks()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getValueForPixel()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[getVisibleDatasetCount()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[has()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[hexString()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[hs()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[inXRange()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[inYRange()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[isAttached()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[isForType()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[isFullSize()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[ji()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[jn()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[ka()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[labelColor()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[labelPointStyle()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[labelTextColor()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[last()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[leftForLtr()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[listen()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[ln()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[logarithmic()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[mix()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[mr()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[negate()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[number()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[numeric()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[on()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[onClick()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[opaquer()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[options()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[override()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[passive()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[path()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[platform()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[pluginScopeKeys()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[plugins()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[pn()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[points()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[qa()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[register()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[remove()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[removeBox()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[removeControllers()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[removeElements()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[removePlugins()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[removeScales()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[rgbString()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[rt()_6]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[running()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[set()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[setWidth()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[si()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[startOf()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[statchart.js]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[textAlign()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[title()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[toBase64Image()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[toggleDataVisibility()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[type()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[unregister()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[updateConfig()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[updateControlPoints()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[updateIndex()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[ur()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[valid()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[wait()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[wn()_4]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[xPlus()_1]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[xn()_2]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[zl()_3]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+- [[zs()]] - code - public/js/filament/widgets/components/stats-overview/stat/chart.js
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/chartjs_stat/chartjs
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 92 edges to [[_COMMUNITY_Module chart.js]]
+- 56 edges to [[_COMMUNITY_Module chart.js_4]]
+- 54 edges to [[_COMMUNITY_Module chart.js_5]]
+- 48 edges to [[_COMMUNITY_Module chart.js_7]]
+- 38 edges to [[_COMMUNITY_Module chart.js_10]]
+- 34 edges to [[_COMMUNITY_Module chart.js_12]]
+- 31 edges to [[_COMMUNITY_Module chart.js_16]]
+- 30 edges to [[_COMMUNITY_Module chart.js_13]]
+- 25 edges to [[_COMMUNITY_Module chart.js_19]]
+- 22 edges to [[_COMMUNITY_Module chart.js_24]]
+- 17 edges to [[_COMMUNITY_Module chart.js_25]]
+- 14 edges to [[_COMMUNITY_Module chart.js_28]]
+- 14 edges to [[_COMMUNITY_Module chart.js_26]]
+- 2 edges to [[_COMMUNITY_Module support.js_3]]
+- 2 edges to [[_COMMUNITY_Module chart.js_9]]
+- 2 edges to [[_COMMUNITY_Module chart.js_31]]
+- 2 edges to [[_COMMUNITY_Module markdown-editor.js_2]]
+- 1 edge to [[_COMMUNITY_Module file-upload.js]]
+- 1 edge to [[_COMMUNITY_Module markdown-editor.js_4]]
+- 1 edge to [[_COMMUNITY_Module select.js_9]]
+- 1 edge to [[_COMMUNITY_Module support.js]]
+- 1 edge to [[_COMMUNITY_Module chart.js_22]]
+- 1 edge to [[_COMMUNITY_Module chart.js_18]]
+- 1 edge to [[_COMMUNITY_Module markdown-editor.js_7]]
+- 1 edge to [[_COMMUNITY_Module rich-editor.js_1]]
+- 1 edge to [[_COMMUNITY_Module chart.js_8]]
+- 1 edge to [[_COMMUNITY_Module chart.js_6]]
+
+## Top bridge nodes
+- [[statchart.js]] - degree 627, connects to 22 communities
+- [[_each()_1]] - degree 14, connects to 2 communities
+- [[hs()_2]] - degree 6, connects to 2 communities
+- [[Xe()_4]] - degree 5, connects to 2 communities
+- [[Js()]] - degree 4, connects to 2 communities

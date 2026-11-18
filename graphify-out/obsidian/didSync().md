@@ -1,0 +1,19 @@
+---
+source_file: "public/js/filament/forms/components/rich-editor.js"
+type: "code"
+community: "Module rich-editor.js"
+location: "L44"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_rich-editorjs
+---
+
+# didSync()
+
+## Connections
+- [[garbageCollectCachedViews()]] - `calls` [EXTRACTED]
+- [[rich-editor.js]] - `contains` [EXTRACTED]
+- [[sync()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_rich-editorjs

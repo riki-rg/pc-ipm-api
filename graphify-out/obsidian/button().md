@@ -1,0 +1,18 @@
+---
+source_file: "public/js/filament/notifications/notifications.js"
+type: "code"
+community: "Module notifications.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_notificationsjs
+---
+
+# button()
+
+## Connections
+- [[notifications.js]] - `contains` [EXTRACTED]
+- [[view()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_notificationsjs

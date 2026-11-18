@@ -1,0 +1,24 @@
+---
+source_file: "public/js/filament/widgets/components/stats-overview/stat/chart.js"
+type: "code"
+community: "Module chart.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_chartjs
+---
+
+# _update()
+
+## Connections
+- [[C()_7]] - `calls` [EXTRACTED]
+- [[Za()_3]] - `calls` [EXTRACTED]
+- [[_notify()_1]] - `calls` [EXTRACTED]
+- [[_refresh()_1]] - `calls` [EXTRACTED]
+- [[getMaxOverflow()_1]] - `calls` [EXTRACTED]
+- [[reset()_2]] - `calls` [EXTRACTED]
+- [[statchart.js]] - `contains` [EXTRACTED]
+- [[update()_3]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_chartjs

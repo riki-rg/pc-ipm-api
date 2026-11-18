@@ -1,0 +1,17 @@
+---
+source_file: "app/Filament/Resources/UserResource/Pages/EditUser.php"
+type: "code"
+community: "Module EditAlbumGaleri.php"
+location: "L13"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_EditAlbumGaleriphp
+---
+
+# .getHeaderActions()
+
+## Connections
+- [[EditUser]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_EditAlbumGaleriphp

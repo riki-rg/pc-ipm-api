@@ -1,0 +1,23 @@
+---
+source_file: "public/js/filament/widgets/components/chart.js"
+type: "code"
+community: "Module chart.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_chartjs
+---
+
+# _s()
+
+## Connections
+- [[Rn()_2]] - `calls` [EXTRACTED]
+- [[componentschart.js]] - `contains` [EXTRACTED]
+- [[darken()]] - `calls` [EXTRACTED]
+- [[desaturate()]] - `calls` [EXTRACTED]
+- [[lighten()]] - `calls` [EXTRACTED]
+- [[saturate()]] - `calls` [EXTRACTED]
+- [[zn()_1]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_chartjs

@@ -1,0 +1,252 @@
+---
+type: community
+cohesion: 0.01
+members: 200
+---
+
+# Module rich-editor.js
+
+**Cohesion:** 0.01 - loosely connected
+**Members:** 200 nodes
+
+## Members
+- [[ArrowLeft()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[ArrowRight()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[Ci()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[St()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[Vo()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[actions()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[activateAttribute()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[activateAttributeIfSupported()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[addHTMLAttribute()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[applyKeyboardCommand()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentDidChangePreviewURL()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentEditorDidRequestDeselectingAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentEditorDidRequestRemovalOfAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentEditorDidRequestRemovingAttributeForAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentEditorDidRequestUpdatingAttributesForAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentForFile()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attachmentIsManaged()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attributeIsActive()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[attributesForFile()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[b()_4]] - code - public/js/filament/forms/components/rich-editor.js
+- [[box()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[canAcceptDataTransfer()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[canActivateAttribute()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[canRedo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[canUndo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[charAt()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[checkSamsungKeyboardBuggyModeEnd()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[checkSamsungKeyboardBuggyModeStart()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[clearSelection()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionControllerDidRequestDeselectingAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionControllerDidSelectAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionControllerWillSyncDocumentView()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionControllerWillUpdateAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionDidPerformInsertionAtRange()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionDidStartEditingAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionDidStopEditingAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[compositionWillLoadSnapshot()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[contentsForInspection()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[createEntry()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[deactivateAttribute()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didBlur()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didBlurCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didChangeCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didClickAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didClickToolbar()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didFocus()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didInputCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[didKeyDownCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[disableViewCaching()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[dragend()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[dragenter()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[dragover()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[ds()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[eachActionButton()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[eachObject()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[eachPiece()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[editor()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[editorDidSyncDocumentView()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[editorWillSyncDocumentView()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[elementIsForbidden()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[elementIsRemovable()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[elementIsntSerializable()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[enableViewCaching()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[find()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[findAttachmentForElement()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[findPositionAtIndexAndOffset()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[form()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formDisabledCallback()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatBackColor()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatBold()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatFontColor()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatFontName()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatItalic()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatJustifyCenter()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatJustifyFull()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatJustifyLeft()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatJustifyRight()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatSetBlockTextDirection()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatSetInlineTextDirection()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatStrikeThrough()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatSubscript()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatSuperscript()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[formatUnderline()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromCodepoints()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromCommonAttributesOfObjects()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromJSON()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromJSONString()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromString()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[fromUCS2String()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[get()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttachmentById()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttachmentPieceForAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttachmentPieces()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttachments()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttributeAtLevel()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttributesAtPosition()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getAttributesHash()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getBody()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getClientRectAtPosition()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getCommonAttributes()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getContent()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getCurrentAttributes()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getDepth()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getDocument()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getEditCount()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getEndData()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getEndPosition()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getExtension()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getFile()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getFilename()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getFilesize()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getFormattedFilesize()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getHTML()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getLevel()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getListItemAttributes()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[getUploadProgress()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[groupObjects()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[has()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[hasFailed()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[hasPerformed()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[hasSucceeded()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[historyRedo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[historyUndo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[indexOf()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[input()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerDidCancelDrag()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerDidReceiveDragOverPoint()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerDidReceiveKeyboardCommand()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerDidRequestRender()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerDidStartDrag()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillAttachFiles()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillCutText()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillHandleInput()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillMoveText()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillPerformRedo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inputControllerWillPerformUndo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[insertLink()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[insertOrderedList()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[insertUnorderedList()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[insertingLongTextAfterUnidentifiedChar()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[inspect()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[installAttachmentEditorForAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[invalidate()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[isBeforeInputInsertText()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[isEnded()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[isPerforming()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[isSerializable()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[isSynced()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[name()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[normalizeListElementNesting()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[notify()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[offsetFromUCS2Offset()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[offsetToUCS2Offset()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[pickFiles()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[positionIsBlockBreak()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[previousEventWasUnidentifiedKeydown()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[proxyMethod()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[ps()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[qr()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[recordUndoEntry()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[redo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[refreshActionButtons()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[refreshViewCache()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[registerType()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[release()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[releaseFile()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[releasePreloadedFile()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[remove()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[requestRemovalOfAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[rich-editor.js]] - code - public/js/filament/forms/components/rich-editor.js
+- [[sanitize()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[sanitizeElement()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[sanitizeElements()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[savePendingCaption()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[setHTML()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[setUploadProgress()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldBreakFormattedBlock()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldDecreaseListLevel()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldIgnore()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldInsertBlockBreak()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldPrependListItem()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[shouldRemoveLastBlockAttribute()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[slice()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[stop()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[test()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[textForAttachmentWithAttributes()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[textForStringWithAttributes()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[toJSONString()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[toUTF16String()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[toggleAttributeIfSupported()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[type()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[ua()_1]] - code - public/js/filament/forms/components/rich-editor.js
+- [[undo()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[uninstall()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[uninstallAttachmentEditor()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[unmanageAttachment()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[unregisterSelectionManager()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[updateActions()]] - code - public/js/filament/forms/components/rich-editor.js
+- [[value()]] - code - public/js/filament/forms/components/rich-editor.js
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Module_rich-editorjs
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 90 edges to [[_COMMUNITY_Module rich-editor.js_1]]
+- 78 edges to [[_COMMUNITY_Module rich-editor.js_2]]
+- 59 edges to [[_COMMUNITY_Module rich-editor.js_3]]
+- 39 edges to [[_COMMUNITY_Module rich-editor.js_4]]
+- 36 edges to [[_COMMUNITY_Module rich-editor.js_5]]
+- 28 edges to [[_COMMUNITY_Module rich-editor.js_6]]
+- 27 edges to [[_COMMUNITY_Module rich-editor.js_7]]
+- 25 edges to [[_COMMUNITY_Module rich-editor.js_8]]
+- 23 edges to [[_COMMUNITY_Module rich-editor.js_9]]
+- 19 edges to [[_COMMUNITY_Module rich-editor.js_10]]
+- 18 edges to [[_COMMUNITY_Module rich-editor.js_11]]
+- 17 edges to [[_COMMUNITY_Module rich-editor.js_12]]
+- 15 edges to [[_COMMUNITY_Module rich-editor.js_14]]
+- 13 edges to [[_COMMUNITY_Module rich-editor.js_15]]
+- 10 edges to [[_COMMUNITY_Module rich-editor.js_13]]
+- 6 edges to [[_COMMUNITY_Module markdown-editor.js_5]]
+- 4 edges to [[_COMMUNITY_Module rich-editor.js_16]]
+- 1 edge to [[_COMMUNITY_Module date-time-picker.js]]
+- 1 edge to [[_COMMUNITY_Module markdown-editor.js]]
+- 1 edge to [[_COMMUNITY_Module chart.js_31]]
+- 1 edge to [[_COMMUNITY_Module chart.js_26]]
+- 1 edge to [[_COMMUNITY_Module support.js_1]]
+- 1 edge to [[_COMMUNITY_Module markdown-editor.js_2]]
+- 1 edge to [[_COMMUNITY_Module support.js_5]]
+
+## Top bridge nodes
+- [[rich-editor.js]] - degree 705, connects to 22 communities
+- [[Ci()_1]] - degree 6, connects to 3 communities
+- [[toggleAttributeIfSupported()]] - degree 14, connects to 1 community
+- [[activateAttributeIfSupported()]] - degree 8, connects to 1 community
+- [[eachActionButton()]] - degree 3, connects to 1 community

@@ -1,0 +1,19 @@
+---
+source_file: "public/js/filament/widgets/components/stats-overview/stat/chart.js"
+type: "code"
+community: "chart.js: stat/chart.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/chartjs_stat/chartjs
+---
+
+# Oo()
+
+## Connections
+- [[hs()_2]] - `calls` [EXTRACTED]
+- [[statchart.js]] - `contains` [EXTRACTED]
+- [[zl()_3]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/chartjs_stat/chartjs

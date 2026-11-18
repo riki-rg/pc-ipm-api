@@ -1,0 +1,17 @@
+---
+source_file: "database/migrations/2025_11_13_131547_create_slides_table.php"
+type: "code"
+community: "Module 2025_11_13_131547_create_slides_table.php"
+location: "L22"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_2025_11_13_131547_create_slides_tablephp
+---
+
+# down()
+
+## Connections
+- [[2025_11_13_131547_create_slides_table.php]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_2025_11_13_131547_create_slides_tablephp

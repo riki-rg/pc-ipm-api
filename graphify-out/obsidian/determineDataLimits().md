@@ -1,0 +1,24 @@
+---
+source_file: "public/js/filament/widgets/components/chart.js"
+type: "code"
+community: "Module chart.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Module_chartjs
+---
+
+# determineDataLimits()
+
+## Connections
+- [[_getLabelBounds()]] - `calls` [EXTRACTED]
+- [[componentschart.js]] - `contains` [EXTRACTED]
+- [[getLabels()]] - `calls` [EXTRACTED]
+- [[getMinMax()]] - `calls` [EXTRACTED]
+- [[getUserBounds()]] - `calls` [EXTRACTED]
+- [[handleTickRangeOptions()]] - `calls` [EXTRACTED]
+- [[l()_9]] - `contains` [EXTRACTED]
+- [[update()_2]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Module_chartjs
