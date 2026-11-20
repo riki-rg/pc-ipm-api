@@ -29,8 +29,9 @@ return new class extends Migration
         }
 
         Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['pengurus_id']);
             $table->dropUnique(['pengurus_id']);
-            $table->dropConstrainedForeignId('pengurus_id');
+            $table->dropColumn('pengurus_id');
             $table->dropColumn('must_change_password');
         });
     }
