@@ -14,7 +14,6 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
-use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
@@ -27,20 +26,23 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('email')->email()->required(),
-                DateTimePicker::make('email_verified_at')->default(now()),
-                TextInput::make('password')
-                    ->password()
+                Select::make('pengurus_id')
+                    ->label('Pengurus')
+                    ->options(fn () => \App\Models\Pengurus::query()->whereDoesntHave('user')->orderBy('nama_lengkap')->pluck('nama_lengkap', 'id'))
+                    ->searchable()
                     ->required()
-                    ->visibleOn('create')
-                    ->dehydrateStateUsing(fn ($state) => Hash::make($state)),
-                
+                    ->unique(ignoreRecord: true)
+                    ->visibleOn('create'),
+                TextInput::make('name')->required()->visibleOn('edit'),
+                TextInput::make('email')->required()->visibleOn('edit'),
+                DateTimePicker::make('email_verified_at')->default(now())->visibleOn('edit'),
                 Select::make('roles')
                     ->relationship('roles', 'name')
                     ->multiple()
+                    ->default(fn () => array_filter([\Spatie\Permission\Models\Role::where('name', 'anggota')->value('id')]) )
                     ->preload()
                     ->searchable()
+                    ->required()
                     ->columnSpanFull(),
             ]);
     }

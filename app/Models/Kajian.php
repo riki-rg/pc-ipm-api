@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -12,7 +13,12 @@ class Kajian extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['judul', 'slug', 'jenis', 'pemateri', 'lokasi', 'waktu', 'deskripsi', 'gambar'];
+    protected $fillable = ['judul', 'slug', 'jenis', 'pemateri', 'lokasi', 'waktu', 'deskripsi', 'gambar', 'user_id'];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
     
     // INI KUNCINYA: Biar Frontend dapet field ini otomatis
     protected $appends = ['gambar_header_url', 'tanggal_formatted']; 
@@ -21,7 +27,9 @@ class Kajian extends Model
     protected static function boot()
     {
         parent::boot();
-        static::creating(fn ($model) => $model->slug = Str::slug($model->judul));
+        static::creating(function ($model) {
+            $model->slug = Str::slug($model->judul);
+        });
         static::updating(fn ($model) => $model->slug = Str::slug($model->judul));
         
         // Auto Hapus Gambar

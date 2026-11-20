@@ -9,4 +9,10 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateAlbumGaleri extends CreateRecord
 {
     protected static string $resource = AlbumGaleriResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['user_id'] = auth()->id();
+        return $data;
+    }
 }

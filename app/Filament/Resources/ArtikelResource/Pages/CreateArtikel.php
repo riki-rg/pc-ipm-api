@@ -9,4 +9,10 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateArtikel extends CreateRecord
 {
     protected static string $resource = ArtikelResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['user_id'] = auth()->id();
+        return $data;
+    }
 }

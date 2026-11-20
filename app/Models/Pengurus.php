@@ -34,6 +34,11 @@ class Pengurus extends Model
         return $this->belongsTo(Bidang::class);
     }
 
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
     public function pembayaranKas(): HasMany
     {
         return $this->hasMany(PembayaranKas::class, 'pengurus_id');

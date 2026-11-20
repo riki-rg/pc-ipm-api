@@ -10,13 +10,20 @@ use Illuminate\Support\Facades\Storage;
 
 class AlbumGaleri extends Model
 {
+
     use HasFactory;
+
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 
     protected $fillable = [
         'judul',
         'cover',
         'kategori',
         'deskripsi',
+        'user_id',
     ];
 
     /**

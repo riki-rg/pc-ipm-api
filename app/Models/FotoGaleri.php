@@ -9,11 +9,12 @@ use Illuminate\Support\Facades\Storage;
 
 class FotoGaleri extends Model
 {
+
     use HasFactory;
 
     // Pastikan nama kolom gambarnya bener (misal: 'foto' atau 'path')
     // Sesuaikan dengan migration lo. Disini gua asumsi namanya 'foto'
-    protected $fillable = ['album_galeri_id', 'foto']; 
+    protected $fillable = ['album_galeri_id', 'foto', 'user_id'];
 
     protected $appends = ['foto_url'];
 

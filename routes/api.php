@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\KajianController;
 use App\Http\Controllers\Api\KegiatanController;
 use App\Http\Controllers\Api\AlbumGaleriController;
 use App\Http\Controllers\Api\PengurusController;
+use App\Http\Controllers\Api\PublicProfileController;
 
 // Rate limiter for contact form
 RateLimiter::for('contact', function (Request $request) {
@@ -35,4 +36,5 @@ Route::get('/kegiatan', [KegiatanController::class, 'index']);
 Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show']);
 Route::get('/galeri', [AlbumGaleriController::class, 'index']);
 Route::get('/galeri/{id}', [AlbumGaleriController::class, 'show']);
+Route::get('/pengurus/{id}/profil', [PublicProfileController::class, 'show']);
 Route::get('/pimpinan', [PengurusController::class, 'pimpinan']);

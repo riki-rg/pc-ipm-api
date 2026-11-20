@@ -83,11 +83,10 @@ class ArtikelResource extends Resource
                         ->seconds(false)
                         ->default(now()),
 
-                    Select::make('user_id')
-                        ->relationship('user', 'name')
+                    Forms\Components\Placeholder::make('penulis')
                         ->label('Penulis')
-                        ->default(auth()->id())
-                        ->required(),
+                        ->content(fn (?Artikel $record) => $record?->user?->name ?? auth()->user()?->name ?? 'Akun aktif')
+                        ->visibleOn('create'),
                 ])->columnSpan(1),
         ])->columns(3);
     }

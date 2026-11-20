@@ -11,10 +11,16 @@ use Illuminate\Support\Facades\Storage;
 
 class Kegiatan extends Model
 {
+
     use HasFactory;
 
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
     protected $fillable = [
-        'judul', 'slug', 'lokasi', 'waktu', 'waktu_selesai', 'deskripsi', 'gambar'
+        'judul', 'slug', 'lokasi', 'waktu', 'waktu_selesai', 'deskripsi', 'gambar', 'user_id'
     ];
     
     // Biar Frontend Next.js otomatis dapet link gambar & tanggal
@@ -29,7 +35,9 @@ class Kegiatan extends Model
     protected static function boot()
     {
         parent::boot();
-        static::creating(fn ($model) => $model->slug = Str::slug($model->judul));
+        static::creating(function ($model) {
+            $model->slug = Str::slug($model->judul);
+        });
         static::updating(fn ($model) => $model->slug = Str::slug($model->judul));
     }
 
