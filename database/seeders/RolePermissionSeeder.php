@@ -22,7 +22,7 @@ class RolePermissionSeeder extends Seeder
         'artikel', 'kajian', 'kegiatan',
         'album_galeri', 'foto_galeri', 'slide',
         'pengaturan', 'pesan_masuk',
-        'pembayaran_kas',
+        'pembayaran_kas', 'pengeluaran',
     ];
 
     /** Bentuk akses: full = semua permission; view = view_any+view; */
@@ -46,6 +46,7 @@ class RolePermissionSeeder extends Seeder
         $all = fn (string $r) => array_map(fn ($a) => "{$a}_{$r}", $actions);
         $viewOnly = fn (string $r) => ["view_any_{$r}", "view_{$r}"];
         $author = fn (string $r) => ["view_any_{$r}", "view_{$r}", "create_{$r}", "update_{$r}"];
+        $cash = fn (string $r) => [...$viewOnly($r), "create_{$r}", "update_{$r}", "delete_{$r}", "delete_any_{$r}"];
         $moderator = fn (string $r) => [...$author($r), "delete_{$r}", "delete_any_{$r}", "replicate_{$r}"];
         $none = fn (string $r) => [];
 
@@ -89,9 +90,10 @@ class RolePermissionSeeder extends Seeder
                 ...$viewOnly('pembayaran_kas'),
             ],
 
-            // Bendahara Umum: kelola kas penuh; read-only struktur org & kegiatan
+            // Bendahara Umum: CRUD kas dan pengeluaran; anggota role lain view-only.
             'bendum' => [
-                ...$all('pembayaran_kas'),
+                ...$cash('pembayaran_kas'),
+                ...$cash('pengeluaran'),
                 ...$viewOnly('pengurus'),
                 ...$viewOnly('kegiatan'),
                 ...$viewOnly('pesan_masuk'),
@@ -107,7 +109,7 @@ class RolePermissionSeeder extends Seeder
                 ...$moderator('kegiatan'),
                 ...$moderator('album_galeri'),
                 ...$moderator('foto_galeri'),
-                ...$author('pembayaran_kas'),
+                ...$viewOnly('pembayaran_kas'),
                 ...$viewOnly('pesan_masuk'),
             ],
 
@@ -135,6 +137,10 @@ class RolePermissionSeeder extends Seeder
                 ...$viewOnly('pengurus'),
             ],
         ];
+
+        foreach (array_diff(array_keys($matrix), ['admin', 'bendum']) as $roleName) {
+            $matrix[$roleName] = [...$matrix[$roleName], ...$viewOnly('pembayaran_kas'), ...$viewOnly('pengeluaran')];
+        }
 
         // 4. Buat role + sync permissions
         foreach ($matrix as $roleName => $perms) {

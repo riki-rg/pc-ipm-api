@@ -30,6 +30,11 @@ class LaporanKas extends Page
 
     public static function canAccess(): bool
     {
+        return auth()->user()?->roles()->exists() ?? false;
+    }
+
+    public static function canExport(): bool
+    {
         return auth()->user()?->hasAnyRole(['admin', 'bendum', 'ketum']) ?? false;
     }
 
@@ -39,6 +44,7 @@ class LaporanKas extends Page
      */
     public static function exportExcel(?\Illuminate\Http\Request $request = null): \Symfony\Component\HttpFoundation\StreamedResponse
     {
+        abort_unless(auth()->user()?->hasAnyRole(['admin', 'bendum', 'ketum']), 403);
         $tahun = (int) ($request?->query('tahun') ?: now()->year);
 
         return response()->streamDownload(function () use ($tahun) {

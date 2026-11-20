@@ -19,6 +19,16 @@ class RekapPembayaranKas extends Page
 
     public array $rekap = [];
 
+    public static function canAccess(array $parameters = []): bool
+    {
+        return auth()->user()?->hasAnyRole(['admin', 'bendum']) ?? false;
+    }
+
+    private function authorizeKasManagement(): void
+    {
+        abort_unless(auth()->user()?->hasAnyRole(['admin', 'bendum']), 403);
+    }
+
     public function mount()
     {
         $tahun = now()->year;
@@ -39,6 +49,7 @@ class RekapPembayaranKas extends Page
 
     public function saveAll()
     {
+        $this->authorizeKasManagement();
         $tahun = now()->year;
 
         DB::transaction(function () use ($tahun) {
@@ -64,6 +75,7 @@ class RekapPembayaranKas extends Page
 
     public function generateKas()
     {
+        $this->authorizeKasManagement();
         $tahun = now()->year;
         $pengurus = Pengurus::all();
 
@@ -93,6 +105,7 @@ class RekapPembayaranKas extends Page
      */
     public function exportExcel()
     {
+        $this->authorizeKasManagement();
         $tahun = now()->year;
 
         return response()->streamDownload(function () use ($tahun) {

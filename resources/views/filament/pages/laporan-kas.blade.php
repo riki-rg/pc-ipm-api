@@ -28,11 +28,13 @@
             <noscript><button type="submit" class="rounded-lg border px-3 py-2 text-sm">Tampilkan</button></noscript>
         </form>
 
-        <a href="{{ route('filament.admin.pages.laporan-kas.export') }}?tahun={{ $tahun }}"
-           class="pcipm-action-button inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold">
-            <x-heroicon-o-arrow-down-tray class="h-4 w-4" />
-            Export Excel
-        </a>
+        @if (auth()->user()?->hasAnyRole(['admin', 'bendum', 'ketum']))
+            <a href="{{ route('filament.admin.pages.laporan-kas.export') }}?tahun={{ $tahun }}"
+               class="pcipm-action-button inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold">
+                <x-heroicon-o-arrow-down-tray class="h-4 w-4" />
+                Export Excel
+            </a>
+        @endif
     </div>
 
     {{-- Ringkasan Saldo --}}
