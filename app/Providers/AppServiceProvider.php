@@ -25,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Gate::policy(\Spatie\Permission\Models\Role::class, \App\Policies\RolePolicy::class);
         Gate::policy(\Spatie\Permission\Models\Permission::class, \App\Policies\PermissionPolicy::class);
+        Gate::policy(\App\Models\ArsipRapat::class, \App\Policies\ArsipRapatPolicy::class);
+        Gate::policy(\App\Models\ProgramKerja::class, \App\Policies\ProgramKerjaPolicy::class);
+        Gate::policy(\App\Models\PeriodeKepengurusan::class, \App\Policies\PeriodeKepengurusanPolicy::class);
         // Paksa skema https: request melalui proxy chain (Cloudflare -> webstack-nginx
         // -> sidecar nginx -> fpm) sehingga Laravel sering menganggap request http.
         // Tanpa ini, Filament meng-generate x-load-src dengan http:// padahal halaman https

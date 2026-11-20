@@ -23,6 +23,7 @@ class RolePermissionSeeder extends Seeder
         'album_galeri', 'foto_galeri', 'slide',
         'pengaturan', 'pesan_masuk',
         'pembayaran_kas', 'pengeluaran',
+        'arsip_rapat', 'program_kerja', 'periode_kepengurusan',
     ];
 
     /** Bentuk akses: full = semua permission; view = view_any+view; */
@@ -88,6 +89,9 @@ class RolePermissionSeeder extends Seeder
                 ...$moderator('pesan_masuk'),
                 ...$viewOnly('slide'),
                 ...$viewOnly('pembayaran_kas'),
+                ...$moderator('arsip_rapat'),
+                ...$moderator('program_kerja'),
+                ...$moderator('periode_kepengurusan'),
             ],
 
             // Bendahara Umum: CRUD kas dan pengeluaran; anggota role lain view-only.
