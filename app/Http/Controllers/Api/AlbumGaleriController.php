@@ -28,7 +28,7 @@ class AlbumGaleriController extends Controller
     public function show($id)
     {
         // Ambil detail album + LIST FOTO DI DALEMNYA
-        $data = AlbumGaleri::with(['user.pengurus.bidang', 'fotoGaleri'])->find($id);
+        $data = AlbumGaleri::with(['user.pengurus.bidang', 'fotoGaleri.user.pengurus.bidang'])->find($id);
 
         if (!$data) {
             return $this->errorResponse('Album tidak ditemukan', 404);
@@ -36,6 +36,12 @@ class AlbumGaleriController extends Controller
 
         $data->setAttribute('author', PublicAuthor::from($data->user));
         $data->unsetRelation('user');
+        $data->setRelation('fotoGaleri', $data->fotoGaleri->map(function ($foto) {
+            $foto->setAttribute('author', PublicAuthor::from($foto->user));
+            $foto->unsetRelation('user');
+            return $foto;
+        }));
+
         return $this->successResponse($data);
     }
 }

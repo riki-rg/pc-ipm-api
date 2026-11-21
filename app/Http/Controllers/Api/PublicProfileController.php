@@ -7,6 +7,7 @@ use App\Models\AlbumGaleri;
 use App\Models\Artikel;
 use App\Models\Kajian;
 use App\Models\Kegiatan;
+use App\Models\FotoGaleri;
 use App\Models\Pengurus;
 use App\Traits\ApiResponse;
 
@@ -33,8 +34,11 @@ class PublicProfileController extends Controller
                 ->concat(Kegiatan::where('user_id', $userId)->get()->map(fn ($item) => [
                     'type' => 'Kegiatan', 'title' => $item->judul, 'date' => $item->created_at?->toDateString(), 'image' => $item->gambar_header_url, 'url' => '/publikasi/kegiatan/'.$item->slug,
                 ]))
-                ->concat(AlbumGaleri::where('user_id', $userId)->withCount('fotoGaleri')->get()->map(fn ($item) => [
-                    'type' => 'Galeri', 'title' => $item->judul, 'date' => $item->created_at?->toDateString(), 'image' => $item->cover_url, 'url' => '/galeri/'.$item->id,
+                ->concat(AlbumGaleri::where('user_id', $userId)->get()->map(fn ($item) => [
+                    'type' => 'Album galeri', 'title' => $item->judul, 'date' => $item->created_at?->toDateString(), 'image' => $item->cover_url, 'url' => '/galeri/'.$item->id,
+                ]))
+                ->concat(FotoGaleri::where('user_id', $userId)->with('album')->get()->map(fn ($item) => [
+                    'type' => 'Foto galeri', 'title' => $item->album?->judul ?? 'Foto galeri', 'date' => $item->created_at?->toDateString(), 'image' => $item->foto_url, 'url' => '/galeri/'.$item->album_galeri_id,
                 ]))
                 ->sortByDesc('date')->values();
         }
